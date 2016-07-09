@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activities.pilu">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"/>
+
+    <com.zys.pilu.customviews.MyFrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <com.zys.pilu.customviews.DragView
+            android:id="@+id/drag"
+            xmlns:app="http://schemas.android.com/apk/res/com.zys.pilu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            app:myBackgroundColor="@color/qianbai"
+            app:dragColor="@color/qingse"
+            app:borderRadius="0"
+            app:delayTime="200"/>
+        <RadioGroup
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:divider="?android:attr/dividerHorizontal"
+            android:showDividers="middle"
+            android:dividerPadding="10dp">
+
+            <RadioButton
+                android:id="@+id/homeTab"
+                android:text="Home"
+                android:textColor="@color/baise"
+                style="@style/tabStyle"/>
+            <RadioButton
+                android:id="@+id/listTab"
+                android:text="List"
+                android:textColor="@color/qianhui"
+                style="@style/tabStyle"/>
+            <RadioButton
+                android:id="@+id/artistTab"
+                android:text="Artist"
+                android:textColor="@color/qianhui"
+                style="@style/tabStyle"/>
+            <RadioButton
+                android:id="@+id/playerTab"
+                android:text="Settings"
+                android:textColor="@color/qianhui"
+                style="@style/tabStyle"/>
+
+        </RadioGroup>
+    </com.zys.pilu.customviews.MyFrameLayout>
+</LinearLayout>
